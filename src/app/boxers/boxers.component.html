@@ -1,8 +1,15 @@
-<div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="onSelect(boxer)">
+<div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="openBoxerDetail(boxer)">
   <span>{{boxer.name}}: {{boxer.weightClass}} with a record of {{boxer.record}} from {{boxer.country}}</span>
 </div>
 
+<button (click)="openNewBoxer()">Add new Boxer</button>
+
 <div *ngIf="selectedBoxer">
   <app-boxer-detail [boxer]="selectedBoxer"></app-boxer-detail>
-  <button (click)="closeBoxerDetail()">Close</button>
+  <button (click)="closeBoxerDetail()">Close Boxer Detail</button>
+</div>
+
+<div *ngIf="newBoxerForm">
+  <app-new-boxer></app-new-boxer>
+  <button (click)="closeNewBoxer()">Close New Boxer Form</button>
 </div>

@@ -1,3 +1,12 @@
-<p>
-  new-boxer works!
-</p>
+<form (submit)="addNewBoxer(newBoxerName.value, newBoxerWeightClass.value, newBoxerCountry.value, newBoxerRecord.value); newBoxerName.value=''; newBoxerWeightClass.value=1; newBoxerCountry.value=''; newBoxerRecord.value='';">
+    <input type="text" #newBoxerName placeholder="Add new boxer name..">
+    <select #newBoxerWeightClass>
+      <option value=1 disabled>Choose your weight class</option>
+      <option *ngFor="let weightClass of weightClasses" value="{{weightClass}}">
+        {{weightClass}}
+      </option>
+    </select>
+    <input type="text" #newBoxerCountry placeholder="Enter boxer's country here..">
+    <input type="text" #newBoxerRecord placeholder="Enter boxer record here. Wins-Losses-Draws">
+    <input type="submit" class="btn btn-warning" value="submit">
+  </form>

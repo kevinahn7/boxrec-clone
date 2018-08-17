@@ -11,8 +11,9 @@ export class BoxersComponent implements OnInit {
 
   boxers = boxerList;
   selectedBoxer: Boxer;
+  newBoxerForm = null;
 
-  onSelect(boxer: Boxer): void {
+  openBoxerDetail(boxer: Boxer): void {
     if (this.selectedBoxer === boxer) {
       this.selectedBoxer = null;
     } else {
@@ -24,6 +25,13 @@ export class BoxersComponent implements OnInit {
     this.selectedBoxer = null;
   }
 
+  openNewBoxer() {
+    this.newBoxerForm = true;
+  }
+
+  closeNewBoxer() {
+    this.newBoxerForm = null;
+  }
 
   constructor() { }
 

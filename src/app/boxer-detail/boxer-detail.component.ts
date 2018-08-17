@@ -11,9 +11,6 @@ export class BoxerDetailComponent implements OnInit {
   @Input() boxer: Boxer;
 
   weightClasses = WEIGHTS;
-  consoleweights() {
-    console.log(this.weightClasses);
-  }
 
   constructor() { }
 

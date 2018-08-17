@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Boxer } from '../models/boxer.models';
 import { boxerList } from '../models/all-boxers.models';
+import { WEIGHTS } from '../models/weightClasses.models';
 
 @Component({
   selector: 'app-new-boxer',
@@ -8,6 +9,7 @@ import { boxerList } from '../models/all-boxers.models';
   styleUrls: ['./new-boxer.component.css']
 })
 export class NewBoxerComponent implements OnInit {
+  weightClasses = WEIGHTS;
 
   addNewBoxer(name, weightClass, country, record ) {
     if (name && weightClass && country && record) {
