@@ -1,0 +1,20 @@
+export const WEIGHTS: string[] = [
+    "light minimumweight",
+        "minimumweight",
+        "light flyweight",
+        "flyweight",
+        "super flyweight",
+        "bantamweight",
+        "super bantamweight",
+        "featherweight",
+        "super featherweight",
+        "lightweight",
+        "super lightweight",
+        "welterweight",
+        "super welterweight",
+        "middleweight",
+        "super middleweight",
+        "light heavyweight",
+        "cruiserweight",
+        "heavyweight"
+]

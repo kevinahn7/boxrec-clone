@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Boxer } from '../models/boxer.models';
+import { WEIGHTS } from '../models/weightClasses.models';
 
 @Component({
   selector: 'app-boxer-detail',
@@ -9,8 +10,11 @@ import { Boxer } from '../models/boxer.models';
 export class BoxerDetailComponent implements OnInit {
   @Input() boxer: Boxer;
 
+  weightClasses = WEIGHTS;
+  consoleweights() {
+    console.log(this.weightClasses);
+  }
 
-  
   constructor() { }
 
   ngOnInit() {

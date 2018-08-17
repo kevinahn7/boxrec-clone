@@ -4,7 +4,7 @@
   <p>Weight: {{boxer.weight}}</p>
   <p>Country: {{boxer.country}}</p>
 
-  <div>
+  <div (click)="consoleweights()">
     <label>Edit Name:
       <input [(ngModel)]="boxer.name" placeholder="Name">
     </label>
@@ -16,7 +16,11 @@
   </div>
   <div>
     <label>Edit Weight:
-      <input [(ngModel)]="boxer.weightClass" placeholder="Weight">
+      <select [(ngModel)]="boxer.weightClass">
+        <option *ngFor="let weightClass of weightClasses" value="{{weightClass}}">
+          {{weightClass}}
+        </option>
+      </select>
     </label>
   </div>
   <div>
