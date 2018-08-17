@@ -1,3 +1,3 @@
 export class Boxer {
-    constructor( public name: string, public weightClass: string, public country: string, public record: number) {}
+    constructor( public name: string, public weightClass: string, public country: string, public record: string) {}
 }
