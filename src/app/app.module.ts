@@ -8,6 +8,7 @@ import { BoxersComponent } from './boxers/boxers.component';
 import { BoxerDetailComponent } from './boxer-detail/boxer-detail.component';
 import { NewBoxerComponent } from './new-boxer/new-boxer.component';
 import { FeaturedBoxerComponent } from './featured-boxer/featured-boxer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FeaturedBoxerComponent } from './featured-boxer/featured-boxer.componen
     BoxersComponent,
     BoxerDetailComponent,
     NewBoxerComponent,
-    FeaturedBoxerComponent
+    FeaturedBoxerComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

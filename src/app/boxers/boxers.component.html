@@ -1,34 +1,37 @@
-<div class="homePageGrid">
-  <div class="featuredboxer">
-    <app-featured-boxer></app-featured-boxer>
-  </div>
-  <div class="allBoxers">
-    <div class="boxerStatsGrid">
-      <span class="boxerCell cellHeading" (click)="sortByName()">Name</span>
-      <span class="boxerCell cellHeading" (click)="sortByWeightClass()">Weight Class</span>
-      <span class="boxerCell cellHeading" (click)="sortByRecord()">Record</span>
-      <span class="boxerCell cellHeading" (click)="sortByCountry()">Country</span>
-      <span class="boxerCell cellHeading" (click)="sortByRanking()">Ranking</span>
+<div class="container">
+  <app-nav-bar></app-nav-bar>
+  <div class="homePageGrid">
+    <div class="featuredboxer">
+      <app-featured-boxer></app-featured-boxer>
     </div>
-    <div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="openBoxerDetail(boxer)" class="boxerStatsGrid">
-      <span class="boxerCell">{{boxer.name}}</span>
-      <span class="boxerCell">{{boxer.weightClass}}</span>
-      <span class="boxerCell">{{boxer.record}}</span>
-      <span class="boxerCell">{{boxer.country}}</span>
-      <span class="boxerCell">{{boxer.ranking}}</span>
+    <div class="allBoxers">
+      <div class="boxerStatsGrid">
+        <span class="boxerCell cellHeading" (click)="sortByName()">Name</span>
+        <span class="boxerCell cellHeading" (click)="sortByWeightClass()">Weight Class</span>
+        <span class="boxerCell cellHeading" (click)="sortByRecord()">Record</span>
+        <span class="boxerCell cellHeading" (click)="sortByCountry()">Country</span>
+        <span class="boxerCell cellHeading" (click)="sortByRanking()">Ranking</span>
+      </div>
+      <div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="openBoxerDetail(boxer)" class="boxerStatsGrid">
+        <span class="boxerCell">{{boxer.name}}</span>
+        <span class="boxerCell">{{boxer.weightClass}}</span>
+        <span class="boxerCell">{{boxer.record}}</span>
+        <span class="boxerCell">{{boxer.country}}</span>
+        <span class="boxerCell">{{boxer.ranking}}</span>
+      </div>
     </div>
   </div>
-</div>
 
 
-<button (click)="openNewBoxer()">Add new Boxer</button>
+  <button (click)="openNewBoxer()">Add new Boxer</button>
 
-<div *ngIf="selectedBoxer">
-  <app-boxer-detail [boxer]="selectedBoxer"></app-boxer-detail>
-  <button (click)="closeBoxerDetail()">Close Boxer Detail</button>
-</div>
+  <div *ngIf="selectedBoxer">
+    <app-boxer-detail [boxer]="selectedBoxer"></app-boxer-detail>
+    <button (click)="closeBoxerDetail()">Close Boxer Detail</button>
+  </div>
 
-<div *ngIf="newBoxerForm">
-  <app-new-boxer></app-new-boxer>
-  <button (click)="closeNewBoxer()">Close New Boxer Form</button>
+  <div *ngIf="newBoxerForm">
+    <app-new-boxer></app-new-boxer>
+    <button (click)="closeNewBoxer()">Close New Boxer Form</button>
+  </div>
 </div>
