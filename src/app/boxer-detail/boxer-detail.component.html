@@ -1,3 +1,28 @@
-<p>
-  boxer-detail works!
-</p>
+<div *ngIf="boxer">
+  <h2>{{boxer.name | uppercase}}</h2>
+  <p>Record: {{boxer.record}}</p>
+  <p>Weight: {{boxer.weight}}</p>
+  <p>Country: {{boxer.country}}</p>
+
+  <div>
+    <label>Edit Name:
+      <input [(ngModel)]="boxer.name" placeholder="Name">
+    </label>
+  </div>
+  <div>
+    <label>Edit Record:
+      <input [(ngModel)]="boxer.record" placeholder="Record">
+    </label>
+  </div>
+  <div>
+    <label>Edit Weight:
+      <input [(ngModel)]="boxer.weightClass" placeholder="Weight">
+    </label>
+  </div>
+  <div>
+    <label>Edit Country:
+      <input [(ngModel)]="boxer.country" placeholder="Country">
+    </label>
+  </div>
+
+</div>

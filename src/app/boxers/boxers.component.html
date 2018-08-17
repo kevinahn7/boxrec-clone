@@ -1,3 +1,5 @@
-<div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer">
-  <span (click)="onSelect(boxer)">{{boxer.name}}: {{boxer.weightClass}} with a record of {{boxer.record}} from {{boxer.country}}</span>
+<div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="onSelect(boxer)">
+  <span>{{boxer.name}}: {{boxer.weightClass}} with a record of {{boxer.record}} from {{boxer.country}}</span>
 </div>
+
+<app-boxer-detail [boxer]="selectedBoxer"></app-boxer-detail>

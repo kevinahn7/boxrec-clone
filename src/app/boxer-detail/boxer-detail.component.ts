@@ -8,6 +8,9 @@ import { Boxer } from '../models/boxer.models';
 })
 export class BoxerDetailComponent implements OnInit {
   @Input() boxer: Boxer;
+
+
+  
   constructor() { }
 
   ngOnInit() {
