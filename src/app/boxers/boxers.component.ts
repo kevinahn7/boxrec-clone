@@ -20,6 +20,10 @@ export class BoxersComponent implements OnInit {
     }
   }
 
+  closeBoxerDetail() {
+    this.selectedBoxer = null;
+  }
+
 
   constructor() { }
 

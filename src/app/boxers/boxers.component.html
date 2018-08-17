@@ -2,4 +2,7 @@
   <span>{{boxer.name}}: {{boxer.weightClass}} with a record of {{boxer.record}} from {{boxer.country}}</span>
 </div>
 
-<app-boxer-detail [boxer]="selectedBoxer"></app-boxer-detail>
+<div *ngIf="selectedBoxer">
+  <app-boxer-detail [boxer]="selectedBoxer"></app-boxer-detail>
+  <button (click)="closeBoxerDetail()">Close</button>
+</div>
