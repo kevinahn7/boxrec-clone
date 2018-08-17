@@ -17,6 +17,7 @@ A clone of the website BoxRec
 * A user should be able to create, read, update and delete boxers
 * A user should be able to see the bouts, date, location, etc. from boxing events.
 * A user should be able to see all upcoming events.
+* A user should be able to see a random featured fighter.
 
 
 

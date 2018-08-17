@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Boxer } from '../models/boxer.models';
+import { boxerList } from '../models/all-boxers.models';
 
 @Component({
   selector: 'app-featured-boxer',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./featured-boxer.component.css']
 })
 export class FeaturedBoxerComponent implements OnInit {
+  boxers = boxerList;
+
+  randomBoxerNumber: number = Math.floor(Math.random() * this.boxers.length);
 
   constructor() { }
 
