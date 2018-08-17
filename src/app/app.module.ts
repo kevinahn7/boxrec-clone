@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BoxersComponent } from './boxers/boxers.component';
 import { BoxerDetailComponent } from './boxer-detail/boxer-detail.component';
+import { NewBoxerComponent } from './new-boxer/new-boxer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BoxersComponent,
-    BoxerDetailComponent
+    BoxerDetailComponent,
+    NewBoxerComponent
   ],
   imports: [
     BrowserModule,

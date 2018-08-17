@@ -4,3 +4,7 @@
 <app-boxers></app-boxers>
 
 
+<div *ngIf="selectedBoxer">
+  <app-boxer-detail [boxer]="selectedBoxer"></app-boxer-detail>
+  <button (click)="closeBoxerDetail()">Close</button>
+</div>
