@@ -12,6 +12,11 @@ export class BoxersComponent implements OnInit {
   boxers = boxerList;
   selectedBoxer: Boxer;
   newBoxerForm = null;
+  sortRankingAsc = false;
+  sortCountryAsc = false;
+  sortNameAsc = false;
+  sortRecordAsc = false;
+  sortWeightClassAsc = false;
 
   openBoxerDetail(boxer: Boxer): void {
     if (this.selectedBoxer === boxer) {
@@ -31,6 +36,38 @@ export class BoxersComponent implements OnInit {
 
   closeNewBoxer() {
     this.newBoxerForm = null;
+  }
+
+  sortByName() {
+    if (this.sortNameAsc === false) {
+      this.sortNameAsc = true;
+      this.boxers.sort((a, b) => {
+        let nameA = a.name.toUpperCase();
+        let nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+    }
+    else {
+      this.sortNameAsc = false;
+      this.boxers.sort((a, b) => {
+        let nameA = a.name.toUpperCase();
+        let nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+      this.boxers.reverse();
+    }
   }
 
   constructor() { }

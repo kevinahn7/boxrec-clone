@@ -12,6 +12,7 @@ export class FeaturedBoxerComponent implements OnInit {
 
   randomBoxerNumber: number = Math.floor(Math.random() * this.boxers.length);
 
+  randomBoxer = this.boxers[this.randomBoxerNumber];
   constructor() { }
 
   ngOnInit() {
