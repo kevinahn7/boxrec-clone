@@ -11,6 +11,7 @@ import { WEIGHTS } from '../models/weightClasses.models';
 })
 export class BoxersComponent implements OnInit {
 
+  weightClasses = WEIGHTS;
   boxers = boxerList;
   selectedBoxer: Boxer;
   newBoxerForm = null;
@@ -19,6 +20,7 @@ export class BoxersComponent implements OnInit {
   sortNameAscending = false;
   sortRecordAscending = false;
   sortWeightClassAscending = false;
+  filterByWeight: string = "allWeights";
 
   openBoxerDetail(boxer: Boxer): void {
     if (this.selectedBoxer === boxer) {
@@ -173,6 +175,10 @@ export class BoxersComponent implements OnInit {
       });
       this.boxers.reverse();
     }
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByWeight = optionFromMenu;
   }
 
   constructor() { }

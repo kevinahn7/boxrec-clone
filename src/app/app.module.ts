@@ -9,7 +9,7 @@ import { BoxerDetailComponent } from './boxer-detail/boxer-detail.component';
 import { NewBoxerComponent } from './new-boxer/new-boxer.component';
 import { FeaturedBoxerComponent } from './featured-boxer/featured-boxer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-
+import { WhichWeightPipe } from './whichWeight.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     BoxerDetailComponent,
     NewBoxerComponent,
     FeaturedBoxerComponent,
-    NavBarComponent
+    NavBarComponent,
+    WhichWeightPipe
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,12 @@
       <app-featured-boxer></app-featured-boxer>
     </div>
     <div class="allBoxers">
+      <select (change)="onChange($event.target.value)">
+          <option value="allWeights">All weights</option>
+          <option *ngFor="let weightClass of weightClasses" value="{{weightClass}}">
+            {{weightClass}}
+          </option>
+        </select>
       <div class="boxerStatsGrid">
         <span class="boxerCell cellHeading" (click)="sortByName()">Name</span>
         <span class="boxerCell cellHeading" (click)="sortByWeightClass()">Weight Class</span>
@@ -12,7 +18,7 @@
         <span class="boxerCell cellHeading" (click)="sortByCountry()">Country</span>
         <span class="boxerCell cellHeading" (click)="sortByRanking()">Ranking</span>
       </div>
-      <div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="openBoxerDetail(boxer)" class="boxerStatsGrid">
+      <div *ngFor="let boxer of boxers | whichWeight:filterByWeight" [class.selected]="boxer === selectedBoxer" (click)="openBoxerDetail(boxer)" class="boxerStatsGrid">
         <span class="boxerCell">{{boxer.name}}</span>
         <span class="boxerCell">{{boxer.weightClass}}</span>
         <span class="boxerCell">{{boxer.record}}</span>
