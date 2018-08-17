@@ -1,27 +1,60 @@
-# BoxrecClone
+# BoxRec Clone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+#### Epicodus JavaScript project #3, 8/17/2018
 
-## Development server
+#### By Kevin Ahn
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+A clone of the website BoxRec
+(http://boxrec.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## User Stories
 
-## Build
+* A user should be able to see a boxers record, stats, record, bouts and picture.
+* A user should be able to find a boxer by name.
+* A user should be able to filter boxers by country, weight or ranking.
+* A user should be able to create, read, update and delete boxers
+* A user should be able to see the bouts, date, location, etc. from boxing events.
+* A user should be able to see all upcoming events.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Setup on OSX
 
-## Running end-to-end tests
+* Install Node.js
+* Install karma-cli globally: `npm install -g karma-cli`
+* Clone the repo
+* `npm install` to install dependencies
+* `npm run start` to build and start the dev server
+* `npm run lint` to explicitly run ESLint
+* `npm run test` to run the unit tests with Karma and Jasmine. Visit `localhost:9876` to view the tests.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Contribution Requirements
 
-## Further help
+1. Clone the repo
+1. Make a new branch
+1. Commit and push your changes
+1. Create a PR
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Technologies Used
+
+* JavaScript
+* Node.js
+* jQuery 3.3.1
+* Bootstrap 4.1.3
+* Babel
+* Webpack
+* ESLint
+* Jasmine
+* Karma
+
+## Links
+
+* [Github Repo] (https://github.com/kevinahn7/boxrec-clone)
+
+## License
+
+This software is licensed under the MIT license.
+
+Copyright (c) 2018 **Kevin Ahn**
