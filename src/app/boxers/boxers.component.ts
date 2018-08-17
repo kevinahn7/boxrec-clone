@@ -10,7 +10,15 @@ import { boxerList } from '../models/all-boxers.models';
 export class BoxersComponent implements OnInit {
 
   boxers = boxerList;
+  selectedBoxer: Boxer;
 
+  onSelect(boxer: Boxer): void {
+    if (this.selectedBoxer === boxer) {
+      this.selectedBoxer = null;
+    } else {
+      this.selectedBoxer = boxer;
+    }
+  }
 
 
   constructor() { }
