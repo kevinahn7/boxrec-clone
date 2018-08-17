@@ -1,4 +1,4 @@
-<form (submit)="addNewBoxer(newBoxerName.value, newBoxerWeightClass.value, newBoxerCountry.value, newBoxerRecord.value); newBoxerName.value=''; newBoxerWeightClass.value=1; newBoxerCountry.value=''; newBoxerRecord.value='';">
+<form (submit)="addNewBoxer(newBoxerName.value, newBoxerWeightClass.value, newBoxerCountry.value, newBoxerRecord.value, newBoxerRanking.value); newBoxerName.value=''; newBoxerWeightClass.value=1; newBoxerCountry.value=''; newBoxerRecord.value=''; newBoxerRanking.value='';">
     <input type="text" #newBoxerName placeholder="Add new boxer name..">
     <select #newBoxerWeightClass>
       <option value=1 disabled>Choose your weight class</option>
@@ -8,5 +8,6 @@
     </select>
     <input type="text" #newBoxerCountry placeholder="Enter boxer's country here..">
     <input type="text" #newBoxerRecord placeholder="Enter boxer record here. Wins-Losses-Draws">
+    <input type="text" #newBoxerRanking placeholder="Enter boxer ranking here">
     <input type="submit" class="btn btn-warning" value="submit">
   </form>

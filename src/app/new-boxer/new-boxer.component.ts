@@ -11,9 +11,9 @@ import { WEIGHTS } from '../models/weightClasses.models';
 export class NewBoxerComponent implements OnInit {
   weightClasses = WEIGHTS;
 
-  addNewBoxer(name, weightClass, country, record ) {
-    if (name && weightClass && country && record) {
-      let newBoxer: Boxer = new Boxer(name, weightClass, country, record);
+  addNewBoxer(name, weightClass, country, record, ranking) {
+    if (name && weightClass && country && record && ranking) {
+      let newBoxer: Boxer = new Boxer(name, weightClass, country, record, ranking);
       boxerList.push(newBoxer);
     }
   }

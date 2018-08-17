@@ -3,6 +3,7 @@
   <p>Record: {{boxer.record}}</p>
   <p>Weight: {{boxer.weight}}</p>
   <p>Country: {{boxer.country}}</p>
+  <p>Ranking: {{boxer.ranking}}</p>
 
   <div>
     <label>Edit Name:
@@ -28,5 +29,10 @@
       <input [(ngModel)]="boxer.country" placeholder="Country">
     </label>
   </div>
+  <div>
+      <label>Edit Ranking:
+        <input [(ngModel)]="boxer.ranking" placeholder="Ranking">
+      </label>
+    </div>
 
 </div>

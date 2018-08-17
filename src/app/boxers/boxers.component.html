@@ -1,6 +1,21 @@
-<div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="openBoxerDetail(boxer)">
-  <span>{{boxer.name}}: {{boxer.weightClass}} with a record of {{boxer.record}} from {{boxer.country}}</span>
+<div class="boxersGrid">
+    <div class="boxerStatsGrid">
+      <span class="boxerCell cellHeading">Name</span>
+      <span class="boxerCell cellHeading">Weight Class</span>
+      <span class="boxerCell cellHeading">Record</span>
+      <span class="boxerCell cellHeading">Country</span>
+      <span class="boxerCell cellHeading">Ranking</span>
+
+    </div>
+    <div *ngFor="let boxer of boxers" [class.selected]="boxer === selectedBoxer" (click)="openBoxerDetail(boxer)" class="boxerStatsGrid">
+      <span class="boxerCell">{{boxer.name}}</span>
+      <span class="boxerCell">{{boxer.weightClass}}</span>
+      <span class="boxerCell">{{boxer.record}}</span>
+      <span class="boxerCell">{{boxer.country}}</span>
+      <span class="boxerCell">{{boxer.ranking}}</span>
+    </div>
 </div>
+
 
 <button (click)="openNewBoxer()">Add new Boxer</button>
 
