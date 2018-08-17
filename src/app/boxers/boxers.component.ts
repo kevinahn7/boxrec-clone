@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Boxer } from '../models/boxer.models';
 import { boxerList } from '../models/all-boxers.models';
+import { WEIGHTS } from '../models/weightClasses.models';
+
 
 @Component({
   selector: 'app-boxers',
@@ -12,11 +14,11 @@ export class BoxersComponent implements OnInit {
   boxers = boxerList;
   selectedBoxer: Boxer;
   newBoxerForm = null;
-  sortRankingAsc = false;
-  sortCountryAsc = false;
-  sortNameAsc = false;
-  sortRecordAsc = false;
-  sortWeightClassAsc = false;
+  sortRankingAscending = false;
+  sortCountryAscending = false;
+  sortNameAscending = false;
+  sortRecordAscending = false;
+  sortWeightClassAscending = false;
 
   openBoxerDetail(boxer: Boxer): void {
     if (this.selectedBoxer === boxer) {
@@ -39,8 +41,8 @@ export class BoxersComponent implements OnInit {
   }
 
   sortByName() {
-    if (this.sortNameAsc === false) {
-      this.sortNameAsc = true;
+    if (this.sortNameAscending === false) {
+      this.sortNameAscending = true;
       this.boxers.sort((a, b) => {
         let nameA = a.name.toUpperCase();
         let nameB = b.name.toUpperCase();
@@ -54,7 +56,7 @@ export class BoxersComponent implements OnInit {
       });
     }
     else {
-      this.sortNameAsc = false;
+      this.sortNameAscending = false;
       this.boxers.sort((a, b) => {
         let nameA = a.name.toUpperCase();
         let nameB = b.name.toUpperCase();
@@ -62,6 +64,38 @@ export class BoxersComponent implements OnInit {
           return -1;
         }
         if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+      this.boxers.reverse();
+    }
+  }
+
+  sortByWeightClass() {
+    if (this.sortWeightClassAscending === false) {
+      this.sortWeightClassAscending = true;
+      this.boxers.sort((a, b) => {
+        let A = WEIGHTS.indexOf(a.weightClass);
+        let B = WEIGHTS.indexOf(b.weightClass);
+        if (A < B) {
+          return -1;
+        }
+        if (A > B) {
+          return 1;
+        }
+        return 0;
+      });
+    }
+    else {
+      this.sortWeightClassAscending = false;
+      this.boxers.sort((a, b) => {
+        let A = WEIGHTS.indexOf(a.weightClass);
+        let B = WEIGHTS.indexOf(b.weightClass);
+        if (A < B) {
+          return -1;
+        }
+        if (A > B) {
           return 1;
         }
         return 0;
